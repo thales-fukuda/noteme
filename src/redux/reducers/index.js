@@ -1,3 +1,5 @@
 import { combinedReducers } from 'redux';
 
-export default combinedReducers({ });
+import notes from './notes';
+
+export default combinedReducers({ notes });
