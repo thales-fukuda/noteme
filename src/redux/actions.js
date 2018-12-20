@@ -9,17 +9,25 @@ export const addNote = () => ({
   type: ADD_NOTE,
 });
 
-export const removeNote = index => ({
+export const removeNote = id => ({
   type: REMOVE_NOTE,
-  noteIndex: index,
+  payload: {
+    noteId: id,
+  },
 });
 
-export const changeNoteTitle = title => ({
+export const changeNoteTitle = (id, title) => ({
   type: CHANGE_NOTE_TITLE,
-  newTitle: title,
+  payload: {
+    noteIndex: id,
+    newTitle: title,
+  },
 });
 
-export const changeNoteBody = body => ({
+export const changeNoteBody = (id, body) => ({
   type: CHANGE_NOTE_BODY,
-  newBody: body,
+  payload: {
+    noteIndex: id,
+    newBody: body,
+  },
 });
