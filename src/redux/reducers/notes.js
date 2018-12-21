@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     case ADD_NOTE: {
       return {
         ...state,
-        notes: [...state.notes, { id: Math.random().toString(), noteTitle: '', noteBody: '' }],
+        notes: [{ id: Math.random().toString(), noteTitle: 'Teste', noteBody: 'teste' }, ...state.notes],
       };
     }
     case REMOVE_NOTE: {

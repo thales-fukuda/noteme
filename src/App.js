@@ -4,12 +4,12 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { store, persistor } from './redux/store';
 
-import Com from './Com';
+import ListOfNotes from './containers/ListOfNotes';
 
 const App = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <Com />
+      <ListOfNotes />
     </PersistGate>
   </Provider>
 );
