@@ -6,7 +6,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 70px;
   left: 0;
-  background-color: #f7efd9;
+  background-color: ${props => props.bgColor};
   transform: translate3d(-100%, 0, 0);
   transition: ease .3s transform;
   &.active{
