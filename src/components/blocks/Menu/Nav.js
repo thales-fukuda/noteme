@@ -6,7 +6,6 @@ const Nav = styled.nav`
   position: fixed;
   top: 70px;
   left: 0;
-  padding: 0 15px;
   background-color: #f7efd9;
   transform: translate3d(-100%, 0, 0);
   transition: ease .3s transform;
