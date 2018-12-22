@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addNote, removeNote } from '../redux/actions';
+import { addNote, removeNote, activeNote } from '../redux/actions';
 import NoteList from '../components/NoteList';
 
 const mapStateToProps = state => ({
@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   addNote: () => dispatch(addNote()),
   removeNote: id => dispatch(removeNote(id)),
+  activeNote: id => dispatch(activeNote(id)),
 });
 
 export default connect(

@@ -3,9 +3,11 @@ import {
   REMOVE_NOTE,
   CHANGE_NOTE_TITLE,
   CHANGE_NOTE_BODY,
+  ACTIVE_NOTE,
 } from '../actionTypes';
 
 const initialState = {
+  activeNote: null,
   notes: [
     {
       id: Math.random().toString(),
@@ -46,6 +48,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         notes: newNotes,
+      };
+    }
+    case ACTIVE_NOTE: {
+      return {
+        ...state,
+        activeNote: state.notes.findIndex(e => e.id === action.payload.noteId),
       };
     }
     default:

@@ -3,6 +3,7 @@ import {
   REMOVE_NOTE,
   CHANGE_NOTE_TITLE,
   CHANGE_NOTE_BODY,
+  ACTIVE_NOTE,
 } from './actionTypes';
 
 export const addNote = () => ({
@@ -19,7 +20,7 @@ export const removeNote = id => ({
 export const changeNoteTitle = (id, title) => ({
   type: CHANGE_NOTE_TITLE,
   payload: {
-    noteIndex: id,
+    noteId: id,
     newTitle: title,
   },
 });
@@ -27,7 +28,14 @@ export const changeNoteTitle = (id, title) => ({
 export const changeNoteBody = (id, body) => ({
   type: CHANGE_NOTE_BODY,
   payload: {
-    noteIndex: id,
+    noteId: id,
     newBody: body,
+  },
+});
+
+export const activeNote = id => ({
+  type: ACTIVE_NOTE,
+  payload: {
+    noteId: id,
   },
 });
