@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { addNote, removeNote, activeNote } from '../redux/actions';
-import NoteList from '../components/NoteList';
+import { addNote, removeNote, activeNote } from '../../redux/actions';
+import NoteListPresentational from './NoteListPresentational';
 
 const mapStateToProps = state => ({
   notes: state.notes.notes,
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(NoteList);
+)(NoteListPresentational);

@@ -6,12 +6,12 @@ import { store, persistor } from './redux/store';
 
 import GlobalStyle from './GlobalStyle';
 
-import ListOfNotes from './containers/ListOfNotes';
+import NoteList from './components/NoteList';
 
 const App = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <ListOfNotes />
+      <NoteList />
       <GlobalStyle />
     </PersistGate>
   </Provider>
