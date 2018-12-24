@@ -23,6 +23,7 @@ export default (state = initialState, action) => {
     case ADD_NOTE: {
       return {
         ...state,
+        activeNote: 0,
         notes: [{ id: Math.random().toString(), noteTitle: 'New note', noteBody: '' }, ...state.notes],
       };
     }
