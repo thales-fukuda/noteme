@@ -7,7 +7,7 @@ import {
 } from '../actionTypes';
 
 const initialState = {
-  activeNote: null,
+  activeNote: 0,
   notes: [
     {
       id: Math.random().toString(),
@@ -29,6 +29,9 @@ export default (state = initialState, action) => {
     case REMOVE_NOTE: {
       return {
         ...state,
+        activeNote: state.notes.length - 1 > state.activeNote
+          ? state.activeNote
+          : state.activeNote - 1,
         notes: state.notes.filter(e => e.id !== action.payload.noteId),
       };
     }
