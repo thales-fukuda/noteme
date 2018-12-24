@@ -28,6 +28,7 @@ class NoteListPresentational extends Component {
     e.stopPropagation();
     const { removeNote } = this.props;
     removeNote(id);
+    this.toggleNav();
   };
 
   render() {
