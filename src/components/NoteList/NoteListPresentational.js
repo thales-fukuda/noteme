@@ -21,6 +21,7 @@ class NoteListPresentational extends Component {
     e.stopPropagation();
     const { activeNote } = this.props;
     activeNote(id);
+    this.toggleNav();
   };
 
   handleRemoveNote = (e, id) => {

@@ -7,7 +7,6 @@ const Note = styled.section`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #CECECE;
-  font-family: 'Lato';
   font-weight: bold;
 `;
 
