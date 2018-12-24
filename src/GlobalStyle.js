@@ -6,7 +6,11 @@ const GlobalStyle = createGlobalStyle`
    padding: 0;
    margin: 0; 
   }
+  body {
+    background-color: #f2f2f2;
+  }
   textarea {
+   background-color: #f2f2f2;
     border: none;
     overflow: auto;
     outline: none;

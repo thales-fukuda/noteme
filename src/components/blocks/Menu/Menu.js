@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 // Elements
 import Button from '../../elements/Button';
+import CloseMenu from './CloseMenu';
 import Nav from './Nav';
 import Note from './Note';
 
@@ -21,6 +22,7 @@ const Menu = styled.header`
 `;
 
 Menu.Button = Button;
+Menu.CloseMenu = CloseMenu;
 Menu.Nav = Nav;
 Menu.Note = Note;
 

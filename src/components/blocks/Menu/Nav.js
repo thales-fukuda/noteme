@@ -10,6 +10,7 @@ const Nav = styled.nav`
   transform: translate3d(-100%, 0, 0);
   transition: ease .3s transform;
   overflow: scroll;
+  z-index: 3;
   &.active{
     transform: translate3d(0, 0, 0);
   }

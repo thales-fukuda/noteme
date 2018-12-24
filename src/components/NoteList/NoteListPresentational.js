@@ -41,7 +41,7 @@ class NoteListPresentational extends Component {
       <Menu bgColor='#F9CA24'>
         <Menu.Button icon={icMenu} onClick={this.toggleNav} />
         <Menu.Button icon={icPlus} onClick={addNote} />
-        <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#E5E5E5'>
+        <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#f2f2f2'>
           {notes.map(el => (
             <Menu.Note key={el.id} onClick={e => this.handleActiveNote(e, el.id)}>
               <Menu.Note.Title>{el.noteTitle}</Menu.Note.Title>
@@ -49,6 +49,7 @@ class NoteListPresentational extends Component {
             </Menu.Note>
           ))}
         </Menu.Nav>
+        { menuOpen && <Menu.CloseMenu onClick={this.toggleNav} /> }
       </Menu>
     );
   }
