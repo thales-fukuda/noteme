@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Text = styled.textarea`
-  margin-top: 15px;
+  min-height: calc(100vh - 190px);
   font-family: 'Slabo 27px';
   font-size: 24px;
   width: 100%;
