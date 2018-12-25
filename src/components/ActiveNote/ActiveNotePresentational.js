@@ -11,8 +11,11 @@ class ActiveNotePresentational extends Component {
   }
 
   componentDidMount = () => {
-    this.changeTextAreaSize(this.textTitle.current);
-    this.changeTextAreaSize(this.textBody.current);
+    const { notes } = this.props;
+    if (notes.length > 0) {
+      this.changeTextAreaSize(this.textTitle.current);
+      this.changeTextAreaSize(this.textBody.current);
+    }
   }
 
   changeTextAreaSize = (el) => {
@@ -38,17 +41,20 @@ class ActiveNotePresentational extends Component {
     const { notes, activeNote } = this.props;
     return (
       <NoteWrapper>
-        <NoteWrapper.TitleText
-          onChange={e => this.handleChangeTitle(e, notes[activeNote].id)}
-          ref={this.textTitle}
-          value={notes[activeNote].noteTitle}
-        />
-        <NoteWrapper.Text
-          onChange={e => this.handleChangeBody(e, notes[activeNote].id)}
-          ref={this.textBody}
-          value={notes[activeNote].noteBody}
-        >
-        </NoteWrapper.Text>
+        {notes.length > 0
+        && <>
+          <NoteWrapper.TitleText
+            onChange={e => this.handleChangeTitle(e, notes[activeNote].id)}
+            ref={this.textTitle}
+            value={notes[activeNote].noteTitle}
+          />
+          <NoteWrapper.Text
+            onChange={e => this.handleChangeBody(e, notes[activeNote].id)}
+            ref={this.textBody}
+            value={notes[activeNote].noteBody}
+          />
+        </>
+        }
       </NoteWrapper>
     );
   }

@@ -41,13 +41,15 @@ class NoteListPresentational extends Component {
       <Menu bgColor='#F9CA24'>
         <Menu.Button icon={icMenu} onClick={this.toggleNav} />
         <Menu.Button icon={icPlus} onClick={addNote} />
-        <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#f2f2f2'>
-          {notes.map(el => (
+        <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#F2F2F2'>
+          {notes.length > 0
+          && notes.map(el => (
             <Menu.Note key={el.id} onClick={e => this.handleActiveNote(e, el.id)}>
               <Menu.Note.Title>{el.noteTitle}</Menu.Note.Title>
               <Menu.Button icon={icMinus} onClick={e => this.handleRemoveNote(e, el.id)} />
             </Menu.Note>
-          ))}
+          ))
+          }
         </Menu.Nav>
         { menuOpen && <Menu.CloseMenu onClick={this.toggleNav} /> }
       </Menu>

@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: #f2f2f2;
   }
-  textarea {
+  button, textarea {
    background-color: #f2f2f2;
     border: none;
     overflow: auto;
