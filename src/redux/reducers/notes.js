@@ -18,7 +18,7 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log(action);
+  console.log(action, state.notes);
   switch (action.type) {
     case ADD_NOTE: {
       return {
@@ -42,7 +42,8 @@ export default (state = initialState, action) => {
       newNotes[noteIndex].noteTitle = action.payload.newTitle;
       return {
         ...state,
-        notes: newNotes,
+        activeNote: 0,
+        notes: [newNotes[noteIndex], ...newNotes.filter(el => el.id !== action.payload.noteId)],
       };
     }
     case CHANGE_NOTE_BODY: {
@@ -51,7 +52,8 @@ export default (state = initialState, action) => {
       newNotes[noteIndex].noteBody = action.payload.newBody;
       return {
         ...state,
-        notes: newNotes,
+        activeNote: 0,
+        notes: [newNotes[noteIndex], ...newNotes.filter(el => el.id !== action.payload.noteId)],
       };
     }
     case ACTIVE_NOTE: {

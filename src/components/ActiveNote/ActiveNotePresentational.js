@@ -16,7 +16,7 @@ class ActiveNotePresentational extends Component {
       this.changeTextAreaSize(this.textTitle.current);
       this.changeTextAreaSize(this.textBody.current);
     }
-  }
+  };
 
   changeTextAreaSize = (el) => {
     const element = el;
