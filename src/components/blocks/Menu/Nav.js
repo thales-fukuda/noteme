@@ -14,6 +14,12 @@ const Nav = styled.nav`
   &.active{
     transform: translate3d(0, 0, 0);
   }
+
+  @media (min-width: 726px) {
+    width: 40%;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 3px 0 6px rgba(0, 0, 0, .16);
+  }
 `;
 
 export default Nav;

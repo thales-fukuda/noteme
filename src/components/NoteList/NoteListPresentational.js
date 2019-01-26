@@ -21,7 +21,9 @@ class NoteListPresentational extends Component {
     e.stopPropagation();
     const { activeNote } = this.props;
     activeNote(id);
-    this.toggleNav();
+    if (!window.matchMedia(' (min-width: 726px) ')) {
+      this.toggleNav();
+    }
   };
 
   handleRemoveNote = (e, id) => {
@@ -29,6 +31,7 @@ class NoteListPresentational extends Component {
     const { removeNote } = this.props;
     removeNote(id);
   };
+
 
   render() {
     const { menuOpen } = this.state;
@@ -38,8 +41,14 @@ class NoteListPresentational extends Component {
     } = this.props;
     return (
       <Menu bgColor='#F9CA24'>
-        <Menu.Button icon={icMenu} onClick={this.toggleNav} />
-        <Menu.Button icon={icPlus} onClick={addNote} />
+        {
+          window.matchMedia(' (min-width: 726px) ')
+            ? <Menu.Button icon={icPlus} onClick={addNote} />
+            : <>
+              <Menu.Button icon={icMenu} onClick={this.toggleNav} />
+              <Menu.Button icon={icPlus} onClick={addNote} />
+              </>
+        }
         <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#F2F2F2'>
           {notes.length > 0
           && notes.map(el => (

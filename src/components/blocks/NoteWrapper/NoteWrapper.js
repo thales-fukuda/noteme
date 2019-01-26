@@ -9,6 +9,10 @@ const NoteWrapper = styled.article`
   padding: 35px;
   box-sizing: border-box;
   overflow-x: hidden;
+
+  @media ( min-width: 726px) {
+    margin-left: 40%;
+  }
 `;
 
 NoteWrapper.TitleText = TitleText;
