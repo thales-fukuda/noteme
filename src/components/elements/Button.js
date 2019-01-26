@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   padding: 0;
@@ -8,5 +9,13 @@ const Button = styled.button`
   background-color: transparent;
   border: none;
 `;
+
+Button.propTypes = {
+  icon: PropTypes.string,
+};
+
+Button.defaultProps = {
+  icon: '',
+};
 
 export default Button;

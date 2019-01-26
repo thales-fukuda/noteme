@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 // Elements
 import Button from '../../elements/Button';
@@ -25,5 +26,13 @@ Menu.Button = Button;
 Menu.CloseMenu = CloseMenu;
 Menu.Nav = Nav;
 Menu.Note = Note;
+
+Menu.propTypes = {
+  bgColor: PropTypes.string,
+};
+
+Menu.defaultProps = {
+  bgColor: '#F9CA24',
+};
 
 export default Menu;

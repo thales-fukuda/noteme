@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Nav = styled.nav`
   height: calc(100vh - 70px);
@@ -21,5 +22,13 @@ const Nav = styled.nav`
     box-shadow: 3px 0 6px rgba(0, 0, 0, .16);
   }
 `;
+
+Nav.propTypes = {
+  bgColor: PropTypes.string,
+};
+
+Nav.defaultProps = {
+  bgColor: '#F2F2F2',
+};
 
 export default Nav;
