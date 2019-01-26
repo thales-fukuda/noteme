@@ -21,7 +21,7 @@ class NoteListPresentational extends Component {
     e.stopPropagation();
     const { activeNote } = this.props;
     activeNote(id);
-    if (!window.matchMedia(' (min-width: 726px) ')) {
+    if (!window.matchMedia(' (min-width: 726px) ').matches) {
       this.toggleNav();
     }
   };
@@ -42,7 +42,7 @@ class NoteListPresentational extends Component {
     return (
       <Menu bgColor='#F9CA24'>
         {
-          window.matchMedia(' (min-width: 726px) ')
+          window.matchMedia(' (min-width: 726px) ').matches
             ? <Menu.Button icon={icPlus} onClick={addNote} />
             : <>
               <Menu.Button icon={icMenu} onClick={this.toggleNav} />
