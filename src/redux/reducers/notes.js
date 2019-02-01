@@ -13,18 +13,24 @@ const initialState = {
       id: Math.random().toString(),
       noteTitle: 'Exemple',
       noteBody: 'This is and exemple.',
+      isActive: true,
     },
   ],
 };
 
 export default (state = initialState, action) => {
-  console.log(action, state.notes);
   switch (action.type) {
     case ADD_NOTE: {
       return {
         ...state,
         activeNote: 0,
-        notes: [{ id: Math.random().toString(), noteTitle: 'New note', noteBody: '' }, ...state.notes],
+        notes: [
+          {
+            id: Math.random().toString(),
+            noteTitle: 'New note',
+            noteBody: '',
+            isActive: true,
+          }, ...state.notes],
       };
     }
     case REMOVE_NOTE: {

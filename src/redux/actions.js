@@ -33,7 +33,7 @@ export const changeNoteBody = (id, body) => ({
   },
 });
 
-export const activeNote = id => ({
+export const updateActiveNote = id => ({
   type: ACTIVE_NOTE,
   payload: {
     noteId: id,

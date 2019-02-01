@@ -19,8 +19,8 @@ class NoteListPresentational extends Component {
 
   handleActiveNote = (e, id) => {
     e.stopPropagation();
-    const { activeNote } = this.props;
-    activeNote(id);
+    const { updateActiveNote } = this.props;
+    updateActiveNote(id);
     if (!window.matchMedia(' (min-width: 726px) ').matches) {
       this.toggleNav();
     }
@@ -38,6 +38,7 @@ class NoteListPresentational extends Component {
     const {
       notes,
       addNote,
+      activeNote,
     } = this.props;
     return (
       <Menu bgColor='#F9CA24'>
@@ -51,8 +52,12 @@ class NoteListPresentational extends Component {
         }
         <Menu.Nav className={menuOpen ? 'active' : ''} bgColor='#F2F2F2'>
           {notes.length > 0
-          && notes.map(el => (
-            <Menu.Note key={el.id} onClick={e => this.handleActiveNote(e, el.id)}>
+          && notes.map((el, index) => (
+            <Menu.Note
+              key={el.id}
+              onClick={e => this.handleActiveNote(e, el.id)}
+              active={activeNote === index ? '1' : '.5'}
+            >
               <Menu.Note.Title>{el.noteTitle}</Menu.Note.Title>
               <Menu.Button icon={icMinus} onClick={e => this.handleRemoveNote(e, el.id)} />
             </Menu.Note>
@@ -69,7 +74,8 @@ NoteListPresentational.propTypes = {
   notes: PropTypes.instanceOf(Array).isRequired,
   addNote: PropTypes.func.isRequired,
   removeNote: PropTypes.func.isRequired,
-  activeNote: PropTypes.func.isRequired,
+  activeNote: PropTypes.number.isRequired,
+  updateActiveNote: PropTypes.func.isRequired,
 };
 
 export default NoteListPresentational;
