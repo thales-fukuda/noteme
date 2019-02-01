@@ -6,5 +6,3 @@
 - Redux
 - Redux Persist
 - styled-components
-
-****
