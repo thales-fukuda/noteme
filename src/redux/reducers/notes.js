@@ -12,7 +12,7 @@ const initialState = {
     {
       id: Math.random().toString(),
       noteTitle: 'Exemple',
-      noteBody: 'This is and exemple.',
+      noteBody: 'This is an exemple.',
       isActive: true,
     },
   ],

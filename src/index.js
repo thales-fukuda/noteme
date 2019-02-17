@@ -8,6 +8,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 /**
  * TODO:
  * React Hooks
- * Import things on Index
+ * Change default props
  * Alias(?)
+ * Improve UI
+ * Improve features
  */
