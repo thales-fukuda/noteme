@@ -58,9 +58,13 @@ const ActiveNotePresentational = (props) => {
 
 ActiveNotePresentational.propTypes = {
   notes: PropTypes.instanceOf(Array).isRequired,
-  activeNote: PropTypes.number.isRequired,
+  activeNote: PropTypes.number,
   changeNoteTitle: PropTypes.func.isRequired,
   changeNoteBody: PropTypes.func.isRequired,
+};
+
+ActiveNotePresentational.defaultProps = {
+  activeNote: 0,
 };
 
 export default ActiveNotePresentational;
