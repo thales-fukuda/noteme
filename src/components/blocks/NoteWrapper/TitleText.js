@@ -6,9 +6,6 @@ const TitleText = styled.textarea`
   font-family: 'Lato';
   font-size: 32px;
   font-weight: bold;
-  :focus{
-    outline: none;
-  }
 `;
 
 export default TitleText;

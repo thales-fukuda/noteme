@@ -43,11 +43,13 @@ const ActiveNotePresentational = (props) => {
             onChange={e => handleChangeTitle(e, notes[activeNote].id)}
             ref={textTitle}
             value={notes[activeNote].noteTitle}
+            name='title'
           />
           <NoteWrapper.Text
             onChange={e => handleChangeBody(e, notes[activeNote].id)}
             ref={textBody}
             value={notes[activeNote].noteBody}
+            name='body'
           />
         </>
       )

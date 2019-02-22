@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #f2f2f2;
     border: none;
     overflow: auto;
-    outline: none;
 
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

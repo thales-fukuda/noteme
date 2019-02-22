@@ -7,9 +7,6 @@ const Text = styled.textarea`
   font-size: 24px;
   width: 100%;
   height: auto;
-  :focus{
-    outline: none;
-  }
 `;
 
 export default Text;
