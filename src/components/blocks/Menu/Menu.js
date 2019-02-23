@@ -21,6 +21,11 @@ const Menu = styled.header`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+
+  @media (min-width: 726px) {
+  box-shadow: 3px 0 6px rgba(0, 0, 0, .16);
+    width: 40%;
+  }
 `;
 
 Menu.Button = Button;

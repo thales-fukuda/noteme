@@ -12,6 +12,7 @@ const NoteWrapper = styled.article`
 
   @media ( min-width: 726px) {
     margin-left: 40%;
+    margin-top: 0;
   }
 `;
 
