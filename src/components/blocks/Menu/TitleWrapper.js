@@ -6,7 +6,7 @@ const TitleWrapper = styled.section`
   
   p {
     font-family: 'Lato';
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 200;
     color: #bcbcbc;
   }
