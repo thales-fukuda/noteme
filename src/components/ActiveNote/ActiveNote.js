@@ -27,6 +27,12 @@ const ActiveNote = (props) => {
     changeTextAreaSize(e.target);
   };
 
+  const handleTitleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      textBody.current.focus();
+    }
+  };
+
   useEffect(() => {
     if (notes.length > 0) {
       changeTextAreaSize(textTitle.current);
@@ -41,6 +47,7 @@ const ActiveNote = (props) => {
         <>
           <NoteWrapper.TitleText
             onChange={e => handleChangeTitle(e, notes[activeNote].id)}
+            onKeyPress={e => handleTitleKeyPress(e)}
             ref={textTitle}
             value={notes[activeNote].noteTitle}
             name='title'
