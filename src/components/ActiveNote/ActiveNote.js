@@ -44,6 +44,7 @@ const ActiveNote = (props) => {
             ref={textTitle}
             value={notes[activeNote].noteTitle}
             name='title'
+            maxLength='50'
           />
           <NoteWrapper.Text
             onChange={e => handleChangeBody(e, notes[activeNote].id)}
