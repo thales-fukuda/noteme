@@ -46,6 +46,7 @@ export default (state = initialState, action) => {
       const newNotes = [...state.notes];
       const noteIndex = state.notes.findIndex(el => el.id === action.payload.noteId);
       newNotes[noteIndex].noteTitle = action.payload.newTitle;
+      newNotes[noteIndex].noteDate = action.payload.noteDate;
       return {
         ...state,
         activeNote: 0,
@@ -56,6 +57,7 @@ export default (state = initialState, action) => {
       const newNotes = [...state.notes];
       const noteIndex = state.notes.findIndex(el => el.id === action.payload.noteId);
       newNotes[noteIndex].noteBody = action.payload.newBody;
+      newNotes[noteIndex].noteDate = action.payload.noteDate;
       return {
         ...state,
         activeNote: 0,

@@ -6,6 +6,7 @@ import Button from '../../elements/Button';
 import CloseMenu from './CloseMenu';
 import Nav from './Nav';
 import Note from './Note';
+import TileWrapper from './TitleWrapper';
 
 const Menu = styled.header`
   width: 100%;
@@ -26,6 +27,7 @@ Menu.Button = Button;
 Menu.CloseMenu = CloseMenu;
 Menu.Nav = Nav;
 Menu.Note = Note;
+Menu.TitleWrapper = TileWrapper;
 
 Menu.propTypes = {
   bgColor: PropTypes.string,

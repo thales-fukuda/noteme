@@ -1,3 +1,5 @@
+import getDate from '../Utils';
+
 import {
   ADD_NOTE,
   REMOVE_NOTE,
@@ -21,6 +23,7 @@ export const changeNoteTitle = (id, title) => ({
   type: CHANGE_NOTE_TITLE,
   payload: {
     noteId: id,
+    noteDate: getDate(),
     newTitle: title,
   },
 });
@@ -29,6 +32,7 @@ export const changeNoteBody = (id, body) => ({
   type: CHANGE_NOTE_BODY,
   payload: {
     noteId: id,
+    noteDate: getDate(),
     newBody: body,
   },
 });
