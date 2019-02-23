@@ -1,3 +1,3 @@
-import NoteList from './NoteList';
+import NoteListWrapper from './NoteListWrapper';
 
-export default NoteList;
+export default NoteListWrapper;

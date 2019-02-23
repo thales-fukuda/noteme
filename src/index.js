@@ -7,8 +7,6 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 /**
  * TODO:
- * React Hooks
- * Change default props
  * Alias(?)
  * Improve UI
  * Improve features

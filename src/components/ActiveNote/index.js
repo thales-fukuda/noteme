@@ -1,3 +1,3 @@
-import ActiveNote from './ActiveNote';
+import ActiveNoteWrapper from './ActiveNoteWrapper';
 
-export default ActiveNote;
+export default ActiveNoteWrapper;
