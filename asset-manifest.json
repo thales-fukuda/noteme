@@ -1,6 +1,6 @@
 {
-  "main.js": "/noteme/static/js/main.55d08768.chunk.js",
-  "main.js.map": "/noteme/static/js/main.55d08768.chunk.js.map",
+  "main.js": "/noteme/static/js/main.bd5e7fd2.chunk.js",
+  "main.js.map": "/noteme/static/js/main.bd5e7fd2.chunk.js.map",
   "static/js/1.5e02a5e3.chunk.js": "/noteme/static/js/1.5e02a5e3.chunk.js",
   "static/js/1.5e02a5e3.chunk.js.map": "/noteme/static/js/1.5e02a5e3.chunk.js.map",
   "runtime~main.js": "/noteme/static/js/runtime~main.abca3781.js",
@@ -9,6 +9,6 @@
   "static/media/minus.svg": "/noteme/static/media/minus.bdb8b89e.svg",
   "static/media/menu.svg": "/noteme/static/media/menu.b18eaddd.svg",
   "index.html": "/noteme/index.html",
-  "precache-manifest.d8e39d7b8d2a388b1d8bbd8321f25188.js": "/noteme/precache-manifest.d8e39d7b8d2a388b1d8bbd8321f25188.js",
+  "precache-manifest.a8d8b8cbb4d35e892db2e5fac1d44481.js": "/noteme/precache-manifest.a8d8b8cbb4d35e892db2e5fac1d44481.js",
   "service-worker.js": "/noteme/service-worker.js"
 }
