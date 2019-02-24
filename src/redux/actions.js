@@ -10,6 +10,9 @@ import {
 
 export const addNote = () => ({
   type: ADD_NOTE,
+  payload: {
+    noteDate: getDate(),
+  },
 });
 
 export const removeNote = id => ({

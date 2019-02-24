@@ -30,6 +30,7 @@ export default (state = initialState, action) => {
             noteTitle: 'New note',
             noteBody: '',
             isActive: true,
+            noteDate: action.payload.noteDate,
           }, ...state.notes],
       };
     }
