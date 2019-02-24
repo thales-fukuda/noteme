@@ -10,9 +10,6 @@ const Note = styled.section`
   align-items: center;
   border-bottom: 1px solid #CECECE;
   font-weight: bold;
-  & > h2 {
-    opacity: ${props => props.active}
-  }
 `;
 
 Note.Title = Title;

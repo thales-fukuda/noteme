@@ -53,13 +53,15 @@ const NoteList = (props) => {
           <Menu.Note
             key={el.id}
             onClick={e => handleActiveNote(e, el.id)}
-            active={activeNote === index ? '1' : '.5'}
           >
-            <Menu.TitleWrapper>
+            <Menu.TitleWrapper active={activeNote === index ? '1' : '.5'}>
               <Menu.Note.Title>{el.noteTitle}</Menu.Note.Title>
               <p>{el.noteDate}</p>
             </Menu.TitleWrapper>
-            <Menu.Button icon={icMinus} onClick={e => handleRemoveNote(e, el.id)} />
+            <Menu.Button
+              icon={icMinus}
+              onClick={e => handleRemoveNote(e, el.id)}
+            />
           </Menu.Note>
         ))
         }
