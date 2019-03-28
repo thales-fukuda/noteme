@@ -73,10 +73,14 @@ const NoteList = (props) => {
 
 NoteList.propTypes = {
   notes: PropTypes.instanceOf(Array).isRequired,
+  activeNote: PropTypes.number,
   addNote: PropTypes.func.isRequired,
   removeNote: PropTypes.func.isRequired,
-  activeNote: PropTypes.number.isRequired,
   updateActiveNote: PropTypes.func.isRequired,
 };
+
+NoteList.defaultProps = {
+  activeNote: 0,
+}
 
 export default NoteList;
