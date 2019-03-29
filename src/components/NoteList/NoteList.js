@@ -81,6 +81,6 @@ NoteList.propTypes = {
 
 NoteList.defaultProps = {
   activeNote: 0,
-}
+};
 
 export default NoteList;
