@@ -10,7 +10,7 @@ const initialState = {
   activeNote: 0,
   notes: [
     {
-      id: Math.random().toString(),
+      id: 0,
       noteTitle: 'Exemple',
       noteBody: 'This is an exemple.',
       isActive: true,
@@ -19,6 +19,7 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case ADD_NOTE: {
       return {
@@ -26,7 +27,7 @@ export default (state = initialState, action) => {
         activeNote: 0,
         notes: [
           {
-            id: Math.random().toString(),
+            id: state.notes.reduce((maxId, note) => Math.max(note.id, maxId), -1) + 1,
             noteTitle: 'New note',
             noteBody: '',
             isActive: true,
