@@ -6,9 +6,9 @@ import toJson from 'enzyme-to-json';
 
 import NoteList from '../../components/NoteList/NoteList';
 
-window.matchMedia = jest.fn(query => ({ 
-  matches: query.indexOf('(min-width: 726px)') !== -1, 
-})); 
+window.matchMedia = jest.fn(query => ({
+  matches: query.indexOf('(min-width: 726px)') !== -1,
+}));
 
 describe('<NoteList/>', () => {
   describe('render()', () => {
@@ -18,10 +18,10 @@ describe('<NoteList/>', () => {
         activeNote: null,
         addNote: () => {},
         removeNote: () => {},
-        updateActiveNote: () => {}
-      }
-      const wrapper = shallow(<NoteList {...fakeProps}/>).dive();
-      expect(toJson(wrapper)).toMatchSnapshot;
+        updateActiveNote: () => {},
+      };
+      const wrapper = shallow(<NoteList {...fakeProps} />).dive();
+      expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
 });

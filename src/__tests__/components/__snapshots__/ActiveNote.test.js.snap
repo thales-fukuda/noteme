@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActiveNote/> render() renders the component 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "Text": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bwzfXH",
+          "isStatic": true,
+          "rules": Array [
+            "
+  min-height: calc(100vh - 190px);
+  margin-top: 30px;
+  background: transparent;
+  font-family: 'Slabo 27px';
+  font-size: 24px;
+  width: 100%;
+  height: auto;
+",
+          ],
+        },
+        "displayName": "styled.textarea",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bwzfXH",
+        "target": "textarea",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+      "TitleText": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "rules": Array [
+            "
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-family: 'Lato';
+  font-size: 32px;
+  font-weight: bold;
+",
+          ],
+        },
+        "displayName": "styled.input",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "input",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-htpNat",
+        "isStatic": true,
+        "rules": Array [
+          "
+  margin-top: 70px;
+  padding: 35px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media ( min-width: 726px) {
+    margin-left: 40%;
+    margin-top: 0;
+  }
+",
+        ],
+      },
+      "displayName": "styled.article",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-htpNat",
+      "target": "article",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

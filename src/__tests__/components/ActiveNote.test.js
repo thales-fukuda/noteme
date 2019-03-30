@@ -14,9 +14,9 @@ describe('<ActiveNote/>', () => {
         activeNote: null,
         changeNoteTitle: () => {},
         changeNoteBody: () => {},
-      }
-      const wrapper = shallow(<ActiveNote {...fakeProps}/>).dive();
-      expect(toJson(wrapper)).toMatchSnapshot;
+      };
+      const wrapper = shallow(<ActiveNote {...fakeProps} />).dive();
+      expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
 });
