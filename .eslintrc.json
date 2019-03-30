@@ -1,18 +1,22 @@
 {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaVersion": 8,
-        "sourceType": "module"
-    },
-    "globals": {
-        "window": true,
-        "document": true
-    },
-    "rules": {
-        "react/jsx-filename-extension": [1, {
-            "extensions": [".js", ".jsx"]
-        }],
-        "jsx-quotes": ["error", "prefer-single"]
-    }
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-single"],
+    "import/no-extraneous-dependencies": false
+  }
 }
