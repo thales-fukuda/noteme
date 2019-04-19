@@ -8,6 +8,7 @@ const Text = styled.textarea`
   font-size: 24px;
   width: 100%;
   height: auto;
+  line-height: 150%;
 `;
 
 export default Text;
