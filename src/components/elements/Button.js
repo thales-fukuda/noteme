@@ -8,6 +8,7 @@ const Button = styled.button`
   background-image: url(${props => props.icon});
   background-color: transparent;
   border: none;
+  cursor: pointer;
 `;
 
 Button.propTypes = {
